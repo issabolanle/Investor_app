@@ -21,6 +21,6 @@ def investment_timer():
  
 
 #  Add interest every 24hrs
- while True:
+while True:
   investment_timer()
   time.sleep(24)
