@@ -3,24 +3,22 @@
 #investment app that returns interest every 24hours
 #import time modules
 import time
+import datetime
 profit_percentage = 10
+ # user enter name of the investor
+name_of_investor = input("enter your name: ")
+print('welcome', name_of_investor, 'to cohort4 investment')
+  
+ #  user enterss the amount to invest
+wallet = int(input('enter amount to invest: ')) 
+transaction_time = datetime.datetime.now()
 
-def investment_timer():
-    # user enter name of the investor
-
- name_of_investor = "nimah"
- print('welcome', name_of_investor, 'to cohort4 application')
-
-#  user enterss the amount to invest
- wallet = 10000
- 
-#  application return 10% on capital
- interest_calc = wallet * profit_percentage / 100
- wallet_balance = wallet + interest_calc
- print(name_of_investor, 'your wallet has been credited with the sum of:', 'N', wallet_balance,"with a 10% interest on your capital")
- 
-
-#  Add interest every 24hrs
 while True:
-  investment_timer()
+  #  application return 10% on capital
+  interest_calc = wallet * profit_percentage / 100
+  wallet_balance = wallet + interest_calc 
+  text ="{} your account has been credited with the sum of: N{:,.2f} with a 10% profit on your capital")
+  print( text.format(name_of_investor, wallet, time_of_transaction))
+   #  Add interest every 24hrs
+
   time.sleep(24)
